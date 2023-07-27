@@ -24,5 +24,10 @@ namespace WPFProyecto3
         {
             InitializeComponent();
         }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
