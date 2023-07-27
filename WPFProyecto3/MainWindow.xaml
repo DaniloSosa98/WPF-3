@@ -297,6 +297,79 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition Width="20"/>
                         </Grid.ColumnDefinitions>
+                        
+                        <!--// Home //-->
+
+                        <Button Grid.Column="1"
+                                x:Name="home"
+                                Style="{StaticResource DockBtnStyle}">
+
+                            <Button.Background>
+
+                                <ImageBrush ImageSource="Assets/img_home.png"
+                                            Stretch="Uniform"/>
+
+                            </Button.Background>
+
+                            <Popup Width="70"
+                                   HorizontalOffset="-12"
+                                   PlacementTarget="{Binding ElementName=home}"
+                                   IsOpen="{Binding ElementName=home, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                                <Grid>
+
+                                    <Border Style="{StaticResource border}">
+
+                                        <TextBlock Text="Home"
+                                                   Style="{StaticResource PopupText}"/>
+
+                                    </Border>
+
+                                    <Path Style="{StaticResource ArrowPath}"/>
+
+                                </Grid>
+                                
+                            </Popup>
+                            
+                        </Button>
+
+                        <!--// Settings //-->
+
+                        <Button Grid.Column="2"
+                                x:Name="setting"
+                                Style="{StaticResource DockBtnStyle}">
+
+                            <Button.Background>
+
+                                <ImageBrush ImageSource="Assets/img_settings.png"
+                                            Stretch="Uniform"/>
+
+                            </Button.Background>
+
+                            <Popup Width="85"
+                                   HorizontalOffset="-20"
+                                   PlacementTarget="{Binding ElementName=setting}"
+                                   IsOpen="{Binding ElementName=setting, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                                <Grid>
+
+                                    <Border Style="{StaticResource border}">
+
+                                        <TextBlock Text="Settings"
+                                                   Style="{StaticResource PopupText}"/>
+
+                                    </Border>
+
+                                    <Path Style="{StaticResource ArrowPath}"/>
+
+                                </Grid>
+
+                            </Popup>
+
+                        </Button>
+
                     </Grid>
                     
                 </Border>
